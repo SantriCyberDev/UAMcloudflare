@@ -8,22 +8,21 @@ Untuk mengotomatisasi Under Attack Mode Cloudflare berdasarkan  penggunaan CPU s
 	1.	Masuk ke Cloudflare Dashboard.
 	2.	Pergi ke My Profile > API Tokens.
 	3.	Buat token baru dengan Zone Settings: Edit.
-	4.	Simpan API Token yang didapat.
+	    Simpan API Token yang didapat.
 
 
 Cara Menjalankan Skrip
-	1.	Simpan skrip dengan nama cloudflare_auto.sh
-	2.	Beri izin eksekusi:
+	1. Simpan skrip dengan nama cloudflare_auto.sh
+	2. Beri izin eksekusi:
 
 chmod +x cloudflare_auto.sh
 
 
-	3.	Jalankan di background:
-
+	3. Jalankan di background:
 nohup ./cloudflare_auto.sh &
 
 
-	4.	Untuk menjalankan otomatis saat booting, tambahkan ke crontab:
+	4. Untuk menjalankan otomatis saat booting, tambahkan ke crontab:
 
 crontab -e
 
