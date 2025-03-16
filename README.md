@@ -12,18 +12,15 @@ Untuk mengotomatisasi Under Attack Mode Cloudflare berdasarkan  penggunaan CPU s
 
 
 Cara Menjalankan Skrip
-	1. Simpan skrip dengan nama cloudflare_auto.sh
-	2. Beri izin eksekusi:
-
+Simpan skrip dengan nama cloudflare_auto.sh
+Beri izin eksekusi:
 chmod +x cloudflare_auto.sh
 
+Jalankan di background:
+  nohup ./cloudflare_auto.sh &
 
-	3. Jalankan di background:
-nohup ./cloudflare_auto.sh &
 
-
-	4. Untuk menjalankan otomatis saat booting, tambahkan ke crontab:
-
+Untuk menjalankan otomatis saat booting, tambahkan ke crontab:
 crontab -e
 
 Tambahkan baris:
@@ -35,13 +32,13 @@ Tambahkan baris:
 Bagaimana Cara Kerjanya?
 
 ✅ Skrip ini akan:
-	•	Mengecek CPU load setiap 60 detik.
-	•	Jika CPU ≥ 80%, maka Under Attack Mode ON.
-	•	Jika CPU < 80%, maka Under Attack Mode OFF.
+	• Mengecek CPU load setiap 60 detik.
+	• Jika CPU ≥ 80%, maka Under Attack Mode ON.
+	• Jika CPU < 80%, maka Under Attack Mode OFF.
  set sesuka mu.. 
 
 Kustomisasi
-	•	Ganti THRESHOLD=80 untuk batas CPU yang lebih tinggi atau rendah.
-	•	Ganti CHECK_INTERVAL=60 jika ingin pengecekan lebih sering atau jarang.
+	• Ganti THRESHOLD=80 untuk batas CPU yang lebih tinggi atau rendah.
+	• Ganti CHECK_INTERVAL=60 jika ingin pengecekan lebih sering atau jarang.
 
 Ini solusi yang fleksibel dan otomatis tanpa perlu campur tangan manual!
